@@ -61,7 +61,7 @@ To set up the project locally and get a local copy up and running:
 
   ### POST /api/wishlist
   Given a JSON format:
-  ```
+  ```python
   placeFields = {
     'id': fields.Integer,
     'name': fields.String,
@@ -84,11 +84,27 @@ To set up the project locally and get a local copy up and running:
 
   <img width="1538" alt="Screenshot 2025-01-22 at 7 39 33 AM" src="https://github.com/user-attachments/assets/e66b8460-b400-4376-936f-5521690645b5" />
 
-  <br />
+  ### GET /api/wishlist
+  This fetches all data in our database. After running the above 3 POST actions, we expect our database to be as below:
   
   <img width="1532" alt="Screenshot 2025-01-22 at 7 39 55 AM" src="https://github.com/user-attachments/assets/32fb2f68-aff1-4438-848d-ed67236ff16d" />
+
+  ### GET /api/wishlist/\<id\>
+  This fetches a specific data in our database with a specified `id`. For instance, our placeField with `id = 1` is Seoul:
+
   <img width="1542" alt="Screenshot 2025-01-22 at 7 40 08 AM" src="https://github.com/user-attachments/assets/69c34c72-b225-4417-b83f-ead8797f27d8" />
+
+  ### PUT /api/wishlist/\<id\>
+  This replaces a specific data in our database with a specified `id`. For instance, replacing the placeField with `id = 2`:
+
   <img width="1538" alt="Screenshot 2025-01-22 at 7 40 25 AM" src="https://github.com/user-attachments/assets/855ae9a8-fa01-414c-b720-09f67ab8e7bb" />
+
+  We can indeed see how Toronto was replaced with Tokyo:
+
   <img width="1540" alt="Screenshot 2025-01-22 at 7 40 50 AM" src="https://github.com/user-attachments/assets/265bdfce-2524-4d22-a5c8-f4fd9d0980c0" />
+  
+  ### DELETE /api/wishlist/\<id\>
+  This deletes a specific data in our database with a specified `id`. For instance, deleting the placeField with `id = 2`:
+
   <img width="1539" alt="Screenshot 2025-01-22 at 7 41 41 AM" src="https://github.com/user-attachments/assets/3ae4b92d-0799-48c4-8d5d-b54a9e61f95d" />
 
